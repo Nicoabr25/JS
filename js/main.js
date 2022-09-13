@@ -84,7 +84,7 @@ let producto2= new item("jarra barista","bazar","aroma caffe",4000,1,true)
 let producto3= new item("kit barista","bazar","barista",12000,5,true)
 let producto4= new item("cafetera chemex","cafetera","chemex",10000,6,true)
 let producto5= new item("cafetera moka","cafetera","moka",8000,8,true)
-let producto6= new item("cafetera bialetti","cafetera","bialettu",16000,4,true)
+let producto6= new item("cafetera bialetti","cafetera","bialetti",16000,4,true)
 let producto7= new item("cafe natural","cafe","natural",3000,16,true)
 let producto8= new item("cafe organico","cafe","saula",8000,6,true)
 
@@ -95,17 +95,17 @@ console.table(productos)
 
 // --------------------Agregar productos mediante función-------------------tipo, marca, precio, cantidad, disponible
 
-function nuevoproducto(){
-    let nombreproductonuevo = prompt("Ingrese nombre de producto")
-    let tipoproductonuevo = prompt("Ingrese el tipo de producto")
-    let marcaproductonuevo = prompt("Ingrese la marca del producto")
-    let precioproductonuevo = Number(prompt("Ingrese el precio del producto"))
-    let cantidadproductonuevo= Number(prompt("Ingrese la cantidad incial del producto" + nombreproductonuevo))
-    let disponibleproductonuevo = confirm("El" +" "+ nombreproductonuevo +" "+ "¿estará disponible para la venta?")
-    let productonuevo = new item(nombreproductonuevo,tipoproductonuevo,marcaproductonuevo,precioproductonuevo,cantidadproductonuevo,disponibleproductonuevo)
-    console.log(productonuevo)
-    productos.push(productonuevo)
-}
+// function nuevoproducto(){
+//     let nombreproductonuevo = prompt("Ingrese nombre de producto")
+//     let tipoproductonuevo = prompt("Ingrese el tipo de producto")
+//     let marcaproductonuevo = prompt("Ingrese la marca del producto")
+//     let precioproductonuevo = Number(prompt("Ingrese el precio del producto"))
+//     let cantidadproductonuevo= Number(prompt("Ingrese la cantidad incial del producto"+" "+ nombreproductonuevo))
+//     let disponibleproductonuevo = confirm("El" +" "+ nombreproductonuevo +" "+ "¿estará disponible para la venta?")
+//     let productonuevo = new item(nombreproductonuevo,tipoproductonuevo,marcaproductonuevo,precioproductonuevo,cantidadproductonuevo,disponibleproductonuevo)
+//     console.log(productonuevo)
+//     productos.push(productonuevo)
+// }
 
 // --------------------Agregar productos preguntando primero-------------------
 // let agregarproducto = confirm("¿Desea agregar nuevos productos a la tienda?")

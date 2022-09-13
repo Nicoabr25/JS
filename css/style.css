@@ -1,20 +1,288 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------Extras--------------------------------------------------------------------------*/
+/*------------Reset------------*/
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(254, 254, 254);
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
-#main h1{
-    margin: 30px;
+body {
+    line-height: 1;
 }
-#main img{
-    margin: 20px;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input,
+.form__article form textarea,
+select {
+    vertical-align: middle;
+}
+
+/*------------ Variables ------------*/
+/*------------ Utilidades ------------*/
+.color-dark {
+    color: #262225;
+}
+
+.color-grey {
+    color: #40393E;
+}
+
+.color-lgreen {
+    color: #3CA6A6;
+}
+
+.color-blue {
+    color: #024959;
+}
+
+/*-------------------------------------------------------------------Secciones--------------------------------------------------------------------------*/
+/*-------General------*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #212529;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header""main""footer";
+}
+
+a {
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+a:hover {
+    color: #3CA6A6;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.75rem;
+}
+
+h6 {
+    font-size: 0.75rem;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+
+/*-------Header------*/
+#header {
+    grid-area: header;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-color:  #212529 ;
+    z-index: 1;
+}
+
+#header img{
+    height: 200px;
+}
+
+
+
+/*-------Main------*/
+
+#main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/fondoporductos.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 200px;
+    }
+
+#main h1{
+    color: antiquewhite;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#main p{
+    color: antiquewhite;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.productos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(238, 238, 238, 0.75);
+    border-radius: 1rem;
+    margin: 5% 10%;
+    padding: 5%;
+}
+.productos input{
+    margin: 10px;
+    background-color: rgba(238, 238, 238, 0.75);
+}
+.table{
+    text-align: center;
+    width: 70vw;
+}
+
+.botones{
+    display: flex;
+    width: 70vw;
+    flex-direction: row;
+    align-items: center ;
+    justify-content: space-around;
+    margin: 5px 1px;
+    padding: 1%;
 }
