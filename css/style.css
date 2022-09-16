@@ -286,3 +286,7 @@ p {
     margin: 5px 1px;
     padding: 1%;
 }
+
+.btneffect{
+    transform: scale(1.2);
+}

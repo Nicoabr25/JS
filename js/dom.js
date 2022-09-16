@@ -60,4 +60,19 @@ function agregarproducto(){
         tabla.innerHTML += fila;
     }
 
+    const botonAddProduct = document.querySelector("#btnAddProduct")
+    const botonRefresh = document.querySelector("#btnRefresh")
 
+    botonAddProduct.addEventListener("click", () =>{
+        agregarproducto()
+    })
+
+    botonRefresh.addEventListener("click", () => {
+        productList()
+    })
+
+    const botones = document.querySelectorAll("button")
+    botones.forEach(btn =>{
+        btn.addEventListener("focus", () => btn.className ="btn btn-success btneffect")
+        btn.addEventListener("blur", () => btn.className = "btn btn-success")
+    })
