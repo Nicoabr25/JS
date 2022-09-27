@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¡Aquí puedes enviarnos tu mensaje y ponerte en contacto con nosotros!">
+    <meta name="keywords" content="cafe, coffee, Aroma caffe, contacto, información, barista, caffe latte">
+    <meta name="owner" content="Nicolás Abraham">
+    <link rel="shortcut icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/array.js"></script>
+    <script src="../js/addproduct.js"></script>
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <header id="header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid px-3 mx-2">
+                    <a class="navbar-brand" href="../index.html"><img src="../img/logogris.png" alt="Logo aroma caffe"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="../index.html">Productos</a>
+                            <a class="nav-link" href="./carrito.html">Ver Carrito</a>
+                            <a class="nav-link active" aria-current="page" href="./anadirproducto.html" style=color:darkcyan>Añadir Productos</a>
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+    </header>
+    <!----------------------------------------------------- Main ----------------------------------------------------->
+    <main id="addProduct">
+        <h1 class="addProduct_titulo">Carrito de Compras</h1>
+        <p>Estos son los productios que seleccionaste:</p>
+        <section class="form_aniadir">
+            <article class="form_aniadir__article">
+                <h1>Formulario para adición de productos</h1>
+                <form> <!--Esto despúes lo voy a modificar, probablemente a un archivo php más adelante -->
+                    <label for="nombre_del_producto">Nombre del Producto</label>
+                        <input type="text" id="inputNombre" class="inputaddproduct" value="Ingresar nombre" tabindex="1" name="nombre_del_producto">
+                        <label for="tipo">Tipo de Producto</label>
+                        <input type="text" id="inputTipo" class="inputaddproduct"  value="Ingrese tipo" tabindex="2" name="tipo">
+                        <label for="tipo">Marca del Producto</label>
+                        <input type="text" id="inputMarca" class="inputaddproduct"  value="Ingrese marca" tabindex="3" name="marca">   
+                        <label for="precio">Precio</label>
+                        <input type="number" id="inputPrecio" class="inputaddproduct"  value="400" tabindex="4" name="precio">
+                        <label for="stock">Stock inicial</label>
+                        <input type="number" id="inputStock" class="inputaddproduct"  value="10" tabindex="5" name="cantidad">
+                        <label for="imagen">Imagen</label>
+                        <input type="text" id="inputImage" class="inputaddproduct"  value="Añadir imagen" tabindex="6" name="Imagen">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="inputdescripcion" value="Ingresa descripcion" class="inputaddproduct"  tabindex="7" name="Descripción" rows="10"></textarea>    
+                    <!-- <input class="button" type="submit" id="btnAgregar" value="Añadir Producto">
+                    <input class="button" type="reset"  id="btnLimpiar" value="Borrar datos"> -->
+                </form>
+                <button class="addproduct__button" onclick="agregarproducto()">Agregar Producto</button>
+                <button class="addproduct__button" type="reset"  id="btnLimpiar">Borrar datos</button>
+            </article>
+        <!-- <div class="botones">
+            <button type="button" class="btn btn-success" onclick="productList()">Listar Productos</button>
+            <button type="button" class="btn btn-success" onclick="agregarproducto()">Agregar Producto</button>
+        </div> -->
+    </main>
+<!----------------------------------------------------- Footer ----------------------------------------------------->
+    <footer id="footer">
+        <div class="footer sticky-bottom">
+            <img class="footer__imagen px-3" src="../img/logofooter4.png" alt="logo del footer">
+            <ul class="px-3">
+                <li><a href="./pages/contacto.html" alt="contacto"><i class="bi-telephone"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><i class="bi-twitter" alt="Twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="bi-instagram" alt="Instagram""></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

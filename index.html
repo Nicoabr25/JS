@@ -4,75 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¡Aquí puedes enviarnos tu mensaje y ponerte en contacto con nosotros!">
+    <meta name="keywords" content="cafe, coffee, Aroma caffe, contacto, información, barista, caffe latte">
+    <meta name="owner" content="Nicolás Abraham">
     <link rel="shortcut icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/main.js"></script>
-    <script defer src="./js/dom.js"></script>
-
-    
+    <script src="./js/array.js"></script>
+    <script defer src="./js/productos.js"></script>
     <title>Aroma Caffe</title>
 </head>
 <body>
     <header id="header">
-        <img src="./img/logogris.png">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid px-3 mx-2">
+                    <a class="navbar-brand" href="./index.html"><img src="./img/logogris.png" alt="Logo aroma caffe"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="./index.html" style=color:darkcyan>Productos</a>
+                            <a class="nav-link" href="./pages/carrito.html">Ver Carrito</a>
+                            <a class="nav-link" href="./pages/anadirproducto.html">Añadir Productos</a>
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
     </header>
-    <main id="main">
-        <h1 class="titulo">Nuestros Productos</h1>
-        <p>A continaución le ofrecemos una lista de nuestros productos, para que pueda disfrutar del mejor café.</p>
-        <article class="productos">
-            <div class="input-group">
-                <input type="search" id="bucarProducto" class="form-control" placeholder="Ingresa el producto a buscar" aria-label="Input group example" aria-describedby="btnGroupAddon">
-            </div>
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Producto</th>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Marca</th>
-                            <th scope="col">Precio</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tabla">
-                        <!-- <tr>
-                            <td scope="row">1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                        </tr> -->
-                    </tbody>
-                </table>
-        </article>
-        <div class="botones">
-            <button type="button" class="btn btn-success" id="btnRefresh" tabindex="1">Listar Productos</button>
-            <button type="button" class="btn btn-success" id="btnAddProduct" tabindex="2">Agregar Producto</button>
-        </div>
+    <!----------------------------------------------------- Main ----------------------------------------------------->
+    <main id="productos">
+        <section class="producto">
+            <!-- Seccion original-->
+            <article class="producto__article d-flex align-items-center">
+                <h1>Nuestros Productos</h1>
+                <h2>A continuación te mostramos los mejores blends de nuestra tienda.</h2>
+                <p class="producto__p">Degustar una exquisita taza de café es un placer que invita a compartir un momento de relajación y paz. Su aromático aroma se hace dueño del espacio y de los pensamientos hasta el último sorbo.Esta mágica bebida que se ha extendido por todo el globo, se ha convertido en uno de los productos más comercializados del mundo, y ha hecho que el tomar café se convertido en una exitosa oportunidad de negocio. Existe una variedad de técnicas que encierran la preparación del café y los baristas cuidan con mística los detalles para garantizar que el café sea servido de la mejor manera posible. Estos especialistas del café no solo seleccionan los mejores granos, o cuentan con la mejor máquina espresso sino también, cuentan un su kit de herramientas para preparar café de forma profesional. Te invitamos a seguir leyendo para que conozcas todo lo que necesitas para preparar y servir la mejor taza de café de forma correcta.</p>
+                <!-- Tarjetas de productos-->
+                <div class="input-group">
+                    <input type="search" id="bucarProducto" class="form-control" placeholder="🔍 Ingresa el producto a buscar" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                </div>
+                <div id="Productcards" class="tarjetas__productos">
+                </div>
+                <div id="Mensaje">
+                </div>
+                <div id="botones__productos">
+                    <button class="botones__productos"><a class="nav-link" href="./pages/carrito.html">Ver Carrito</a></button>
+                    <button class="botones__productos"><a class="nav-link" href="./pages/contacto.html">Contactanos</a></button>
+                </div>
+            </article>
+        </section>
     </main>
-    <footer>
-
+    <!----------------------------------------------------- Footer ----------------------------------------------------->
+    <footer id="footer">
+        <div class="footer sticky-bottom">
+            <img class="footer__imagen px-3" src="./img/logofooter4.png" alt="logo del footer">
+            <ul class="px-3">
+                <li><a href="./pages/contacto.html" alt="contacto"><i class="bi-telephone"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><i class="bi-twitter" alt="Twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="bi-instagram" alt="Instagram""></i></a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
