@@ -91,9 +91,10 @@ busqueda.addEventListener("input", filtrarProductos);
 const Mensaje = document.querySelector("#Mensaje");
 
 function CrearMensaje(prod){
-    if(prod !=""){
-        Mensaje.innerHTML =`<div><h4>✅ El producto ${prod.nombre} se ha agregado al carrito</h4></div>`
-    }
+    prod !="" &&  (Mensaje.innerHTML =`<div><h4>✅ El producto ${prod.nombre} se ha agregado al carrito</h4></div>`)
+    // if(prod !=""){
+    //     Mensaje.innerHTML =`<div><h4>✅ El producto ${prod.nombre} se ha agregado al carrito</h4></div>`
+    // }
     setTimeout(BorrarMensaje, 2000);
 }
 

@@ -1,6 +1,6 @@
 // --------------------Carrito de Compras utiliza la funcion de comprar definida en el class--------------
 
-let carrito = JSON.parse(localStorage.getItem("carrito"))
+let carrito = JSON.parse((localStorage.getItem("carrito")) || [])
 const tablacarrito = document.querySelector("#tabla_carrito")
 
 function updatecart(carrito){
