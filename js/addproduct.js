@@ -1,53 +1,64 @@
-// const nombreproductonuevo =document.querySelector("#inputNombre");
-// const tipoproductonuevo =document.querySelector("#inputTipo");
-// const marcaproductonuevo =document.querySelector("#inputMarca");
-// const precioproductonuevo =document.querySelector("#inputPrecio");
-// const stockproductonuevo =document.querySelector("#inputStock");
-// const descripcionproductonuevo =document.querySelector("#inputdescripcion");
+// const btnuser = document.querySelector("#btnuser");
+// const btnborrar = document.querySelector("#btnborrar");
 
+// let username = "aromacaffe"
+// let userpass = "aromacaffe"
 
 // //----------------------------Formulario----------------------------//
-// const inputs = document.querySelectorAll("input")
-// inputs.forEach(input =>{
-//     input.addEventListener("focus", () => input.className = "addproduct__borderinput")
-//     input.addEventListener("blur", () => input.className = "")
-// })
-
-
-// console.log (stockproductonuevo)
 
 // ------------------ Add Product --------------// //id, imagen, nombre, tipo, marca, precio, stock, descripcion, disponible//
 
-// function frfr(){
-    // const valores = document.querySelectorAll(".inputaddproduct")
-    // debugger
-    // let disponibilidad = false;
-    // if (parseInt(stockproductonuevo.value) > 0){
-    //     disponibilidad = true;
-    // }
-    // let nuevoid = productos.length + 1;
-    // let productonuevo = new item(nuevoid, "./img/nodisponible.png", valores[0].value, valores[1].value, valores[2].value, parseInt(valores[3].value), parseInt(valores[4].value), valores[6].value, disponibilidad)
-    //     console.log(productonuevo)
-    //     prodadded.push(productonuevo);
-    //     localStorage.setItem("prodadded", JSON.stringify(prodadded));
-    // }
-
 function agregarproducto(){
-            let nuevoid = productos.length + 1;
-            let nombreproductonuevo = prompt("ingresa el nombre del producto")
-            let tipoproductonuevo = prompt("Ingrese el tipo de producto")
-            let marcaproductonuevo = prompt("Ingrese la marca del producto")
-            let precioproductonuevo = Number(prompt("Ingrese el precio del producto"))
-            let stockproductonuevo= Number(prompt("Ingrese el stock incial del producto"+" "+ nombreproductonuevo))
-            let descricionproductonuevo = prompt("¿Cual es la descripcion del producto nuevo?")
-            let disponibleproductonuevo = confirm("El" +" "+ nombreproductonuevo +" "+ "¿estará disponible para la venta?")
-            let productonuevo = new item(nuevoid, "./img/nodisponible.png",nombreproductonuevo,tipoproductonuevo,marcaproductonuevo,precioproductonuevo,stockproductonuevo,descricionproductonuevo,disponibleproductonuevo)
-            console.log(productonuevo)
-            prodadded.push(productonuevo);
-            localStorage.setItem("prodadded", JSON.stringify(prodadded));
+    const valores = document.querySelectorAll(".inputaddproduct")
+    debugger
+    let disponibilidad = false;
+        valores[4].value > 0 && (disponibilidad=true)
+    let nuevoid = productos.length + 1;
+    let productonuevo = new item(nuevoid, "./img/nodisponible.png", valores[0].value, valores[1].value, valores[2].value, parseInt(valores[3].value), parseInt(valores[4].value), valores[6].value, disponibilidad)
+        console.log(productonuevo)
+        prodadded.push(productonuevo);
+        localStorage.setItem("prodadded", JSON.stringify(prodadded));
+
+        Toastify({
+            text: "Se ha añadido el producto al Inventario",
+            duration: 2000,
+            gravity: "top",
+            position : "left",
+            style: {
+                background: "#3ca6a657",
+            }
+        }).showToast();
+    }
+
+
+function loginuser(){
+    const username = document.querySelector("#username").value;
+    const userpass = document.querySelector("#userpass").value;
+    if (username =="admin" & userpass == "admin"){
+        // alert ("Bienvenido Admin, ¿Hay nuevos productos?");
+        swal({
+            title: "Bienvenido a AromaCaffe",
+            text: "Ya puedes agregar productos",
+            icon: "success",
+            button: "Vamos!",
+        });
+        const form_login = document.querySelector("#loginuser")
+        form_login.className = "dsnone"
+        const form_add_product = document.querySelector("#form_add_product")
+        form_add_product.className = "form_aniadir__article";
+    }
+    else{
+        swal({
+            title: "Mmmm...🤔 Tu no eres el administrador",
+            text: "Hemos enviado un velocirraptor a buscarte 🦖",
+            icon: "warning",
+            button: "A correr!",
+        });
+        
+    }
 }
-localStorage.setItem("prodadded", JSON.stringify(prodadded))
-// window.onload=function(){
-// const btnadd = document.querySelector("#btnadd")
-// const valores = document.querySelectorAll(".inputaddproduct")
-// btnadd.addEventListener("click", agregarproducto(valores));}
+
+// function borraruser(){
+//     username.value = ""
+//     userpass.value = ""
+// }

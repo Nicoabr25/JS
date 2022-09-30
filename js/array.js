@@ -57,8 +57,9 @@ class item{
         }
     };
 
-    let productos =[]
-    // let prodadded = Object.entries(JSON.parse(localStorage.getItem("prodadded")))
+    // let productos =[]
+    let prodinicial = []
+    let prodadded = JSON.parse(localStorage.getItem("prodadded")) || [];
 
 
     // let productos = prodincial.concat(prodadded) //id, imagen, nombre, tipo, marca, precio, stock, descripcion, disponible//
@@ -72,9 +73,9 @@ class item{
     let producto7= new item(7,"./img/cafenatural.png","Café Natural","cafe","natural",3000,16,"Café Natural de altura cosechado a 800 metros sobre el nivel del mar.",true);
     let producto8= new item(8,"./img/cafeorganico.png","Café Organico","cafe","saula",8000,6,"Café Orgánico certificado de autor.",true);
     
-    productos.push(producto1,producto2,producto3,producto4,producto5,producto6,producto7,producto8);
+    prodinicial.push(producto1,producto2,producto3,producto4,producto5,producto6,producto7,producto8);
     
-    // let productos = [...prodinicial, ...prodadded]
+    let productos = [...prodinicial, ...prodadded]
 
 // function ActualizarLista(){
 //     let prodadded = JSON.parse(localStorage.getItem("prodadded"));
