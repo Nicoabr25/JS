@@ -35,7 +35,12 @@ botonlimpiar.addEventListener("click", vaciarcarrito);
 function pagar(){ 
     const sumatotal = carrito.reduce ((acc, el) => acc + el.precio*el.cantidad, 0);
     console.log(sumatotal);
-    alert ("Se debitaran $" +" "+ sumatotal +" "+"de su tarjeta. Gracias por su compra!")
+    swal({
+        title: "Pago Realizado",
+        text: "Se debitaron $" +" "+ sumatotal +" "+"de su tarjeta. ¡Gracias por su compra!",
+        icon: "success",
+        button: "Gracias ☕",
+    });
 }
 
 function vaciarcarrito(){
@@ -47,9 +52,17 @@ function vaciarcarrito(){
 //-------Asignar botones para eliminar al carrito-----//
 
 function eliminarPorducto(id){
+    debugger
     const item = carrito.find((prod)=> prod.id === id)
     let posicion = carrito.indexOf(item);
+    if (item.cantidad == 1){
     carrito.splice(posicion,1);
     localStorage.setItem("carrito", JSON.stringify(carrito));
     updatecart(carrito);
+    }
+    else {
+        item.cantidad--;
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        updatecart(carrito)
+    }
 }

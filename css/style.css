@@ -657,6 +657,12 @@ p {
     margin: 5px 1px;
     padding: 1%;
 }
+
+.buttonBorrar{
+    border: none;
+    background-color: #ffffff00;
+    font-size: larger;
+}
 /*-------Añadir Producto------*/
 #addProduct {
     grid-area: main;
