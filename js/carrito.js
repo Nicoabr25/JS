@@ -52,7 +52,6 @@ function vaciarcarrito(){
 //-------Asignar botones para eliminar al carrito-----//
 
 function eliminarPorducto(id){
-    debugger
     const item = carrito.find((prod)=> prod.id === id)
     let posicion = carrito.indexOf(item);
     if (item.cantidad == 1){
