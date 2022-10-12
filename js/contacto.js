@@ -12,15 +12,16 @@ function enviarcomentario(){
     localStorage.setItem("comentario", contactoComentario.value);
 }
 
-
-
 inputs.forEach(input =>{
     input.addEventListener("focus", () => input.className = "addproduct__borderinput")
     input.addEventListener("blur", () => input.className = "")
 })
 
 
-comentarioEnviar.addEventListener("click", enviarcomentario);
+comentarioEnviar.addEventListener("click", (e)=>{
+    e.preventDefault();
+    enviarcomentario();
+});
 
 function recuperardatos(){
     contactoNombre.value = localStorage.getItem("nombre");

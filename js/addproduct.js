@@ -1,16 +1,15 @@
-// const btnuser = document.querySelector("#btnuser");
-// const btnborrar = document.querySelector("#btnborrar");
-
-// let username = "aromacaffe"
-// let userpass = "aromacaffe"
 
 // //----------------------------Formulario----------------------------//
 
 // ------------------ Add Product --------------// //id, imagen, nombre, tipo, marca, precio, stock, descripcion, disponible//
+// const botonaddproduct = document.querySelector("#addproduct__send")
+// botonaddproduct.addEventListener("click", (e)=>{
+//     e.preventDefault();
+//     agregarproducto();
+// })
 
 function agregarproducto(){
     const valores = document.querySelectorAll(".inputaddproduct")
-    debugger
     let disponibilidad = false;
         valores[4].value > 0 && (disponibilidad=true)
     let nuevoid = productos.length + 1;
@@ -35,7 +34,6 @@ function loginuser(){
     const username = document.querySelector("#username").value;
     const userpass = document.querySelector("#userpass").value;
     if (username =="admin" & userpass == "admin"){
-        // alert ("Bienvenido Admin, ¿Hay nuevos productos?");
         swal({
             title: "Bienvenido a AromaCaffe",
             text: "Ya puedes agregar productos",
@@ -57,8 +55,3 @@ function loginuser(){
         
     }
 }
-
-// function borraruser(){
-//     username.value = ""
-//     userpass.value = ""
-// }

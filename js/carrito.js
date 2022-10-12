@@ -41,6 +41,7 @@ function pagar(){
         icon: "success",
         button: "Gracias ☕",
     });
+    vaciarcarrito();
 }
 
 function vaciarcarrito(){

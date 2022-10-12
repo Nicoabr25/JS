@@ -704,7 +704,7 @@ p {
 
 .form_aniadir__article {
     display: flex;
-    height: 95vh;
+    height: 100vh;
     width: 70vw;
     flex-direction: column;
     justify-content: space-between;
@@ -824,14 +824,15 @@ p {
 
 @media screen and (min-width: 0px) and (max-width: 429px) {
     .form_aniadir {
+
+        width: 100vw;
         margin: 10% 2%;
         padding: 1% 0%;
         flex-direction: column;
     }
 
     .form_aniadir__article {
-        width: 90vw;
-        height: 100%;
+        width: 100vw;
         margin-top: 5%;
     }
 
@@ -870,14 +871,16 @@ p {
 
 @media screen and (min-width: 429px) and (max-width: 768px) {
     .form_aniadir {
+        height: 100vh;
+        width: 100vw;
         margin: 10% 2%;
         padding: 1% 0%;
         flex-direction: column;
     }
 
     .form_aniadir__article {
-        width: 90vw;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         flex-direction: column;
     }
 
@@ -888,7 +891,7 @@ p {
     }
 
     .form_aniadir__article form {
-        width: 100%;
+        width: 100vw;
         display: flex;
         flex-direction: column;
     }
@@ -913,6 +916,8 @@ p {
         font-weight: 500;
         padding: 3%;
     }
+
+    
 }
 
 

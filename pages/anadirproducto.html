@@ -47,9 +47,9 @@
             <article id="loginuser" class="loginuser">
                 <h2>Ingreso de Administrador de la tienda</h2>
                 <label for="user">Nombre de Usuario</label>
-                <input id="username" type="text"  class="login" placeholder="Ingresar el nombre de usuario">
+                <input id="username" type="text"  class="login" value="admin" placeholder="Ingresar el nombre de usuario">
                 <label for="password">Contraseña</label>
-                <input id="userpass" type="text"  class="login"  placeholder="Ingrese su contraseña">
+                <input id="userpass" type="text"  class="login" value="admin" placeholder="Ingrese su contraseña">
                 <div class="divbutton">
                     <input class="loginbutton" type="submit" onclick="loginuser()" value="Ingresar">
                     <input class="loginbutton" type="reset" value="Borrar datos">
@@ -59,24 +59,25 @@
                 <h3>Formulario para incorporación de productos</h1>
                 <form action=""> <!--Esto despúes lo voy a modificar, probablemente a un archivo php más adelante -->
                         <label for="nombre_del_producto">Nombre del Producto</label>
-                        <input type="text"  class="inputaddproduct" placeholder="Ingresar nombre" tabindex="1" name="nombre_del_producto">
+                        <input type="text"  class="inputaddproduct" value="Molinillo" placeholder="Ingresar nombre" tabindex="1" name="nombre_del_producto">
                         <label for="tipo">Tipo de Producto</label>
-                        <input type="text"  class="inputaddproduct"  placeholder="Ingrese tipo" tabindex="2" name="tipo">
+                        <input type="text"  class="inputaddproduct"  value="bazar" placeholder="Ingrese tipo" tabindex="2" name="tipo">
                         <label for="tipo">Marca del Producto</label>
-                        <input type="text"  class="inputaddproduct"  placeholder="Ingrese marca" tabindex="3" name="marca">   
+                        <input type="text"  class="inputaddproduct"  value="Molinex" placeholder="Ingrese marca" tabindex="3" name="marca">   
                         <label for="precio">Precio</label>
-                        <input type="number"  class="inputaddproduct"  placeholder="Ingrese precio" tabindex="4" name="precio">
+                        <input type="number"  class="inputaddproduct" value=3000 placeholder="Ingrese precio" tabindex="4" name="precio">
                         <label for="stock">Stock inicial</label>
-                        <input type="number"  class="inputaddproduct"  placeholder="Ingrese Stock inicial" tabindex="5" name="cantidad">
+                        <input type="number"  class="inputaddproduct"  value=10 placeholder="Ingrese Stock inicial" tabindex="5" name="cantidad">
                         <label for="imagen">Imagen</label>
-                        <input type="text"  class="inputaddproduct"  placeholder="Añadir imagen" tabindex="6" name="Imagen">
+                        <input type="text"  class="inputaddproduct"  value="Añadir Imagen" placeholder="Añadir imagen" tabindex="6" name="Imagen">
                         <label for="descripcion">Descripción:</label>
-                        <textarea  placeholder="Ingresa descripcion" class="inputaddproduct"  tabindex="7" name="Descripción" rows="10"></textarea>    
+                        <textarea  placeholder="Ingresa descripcion" class="inputaddproduct"  tabindex="7" name="Descripción" rows="10">Molinillo automático de acero inoxidable</textarea>   
                 </form>
                 <div class="divbutton">
-                <button class="addproduct__button" onclick="agregarproducto()">Agregar Producto</button>
-                <button class="addproduct__button" type="reset"  id="btnLimpiar">Borrar datos</button>
+                    <button id="addproduct__send" onclick=agregarproducto() class="addproduct__button">Agregar Producto</button>
+                    <button class="addproduct__button" type="reset"  id="btnLimpiar">Borrar datos</button>
                 </div>
+
             </article>
     </main>
 <!----------------------------------------------------- Footer ----------------------------------------------------->

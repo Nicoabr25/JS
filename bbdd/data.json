@@ -1,0 +1,95 @@
+[
+    {
+        "id": 1,
+        "imagen": "./img/cafetera_molinillo1.png",
+        "nombre": "Cafetera Automática",
+        "tipo": "cafetera",
+        "marca": "oster",
+        "precio": 61000,
+        "stock": 5,
+        "descripcion": "Cafetera automática con molinillo eléctrico con capacidad para dos bocas, con 25 bares de presión de trabajo.",
+        "disponible": true
+    },
+    {
+        "id":2,
+        "imagen": "./img/jarrabarista.png",
+        "nombre":"Jarra Barista",
+        "tipo":"bazar",
+        "marca":"aroma caffe",
+        "precio":4599,
+        "stock":1,
+        "descripcion":"Jarra de dibujo para Barista. Realizada en acero inoxidable con detalles en Cromo.",
+        "disponible":true
+    },
+
+    {
+        "id":3,
+        "imagen":"./img/kitbarista.png",
+        "nombre":"Kit Barista",
+        "tipo":"bazar",
+        "marca":"barista",
+        "precio":6700,
+        "stock":5,
+        "descripcion":"Kit de Inicio Barista, dabricado en Acero Inoxidable con detalles en cobre.",
+        "disponible":true
+    },
+    {
+        "id":4,
+        "imagen":"./img/chemex.png",
+        "nombre":"Cafetera Chemex",
+        "tipo":"cafetera",
+        "marca":"chemex",
+        "precio":7200,
+        "stock":6,
+        "descripcion":"Elegante cafetera chemex de vidrio resistente a altas temperaturas.",
+        "disponible":true
+    },
+    {
+        "id":5,
+        "imagen":"./img/cafeteramoka.png",
+        "nombre":"Cafetera Moka",
+        "tipo":"cafetera",
+        "marca":"moka",
+        "precio":4500,
+        "stock":8,
+        "descripcion":"La clásica cafetera Moka Italiana. Material: Acero Inoxidable.",
+        "disponible":true
+    },
+    {
+        "id":6,
+        "imagen":"./img/cafeterabialetti.png",
+        "nombre":"Cafetera Bialetti",
+        "tipo":"cafetera",
+        "marca":"bialetti",
+        "precio":8000,
+        "stock":4,
+        "descripcion":"Cafetera de diseño desarollada por Bialetti Italia.",
+        "disponible":true
+    },
+    {
+        "id":7,
+        "imagen":"./img/cafenatural.png",
+        "nombre":"Café Natural",
+        "tipo":"cafe",
+        "marca":"natural",
+        "precio":1000,
+        "stock":16,
+        "descripcion":"Café Natural de altura cosechado a 800 metros sobre el nivel del mar.",
+        "disponible":true
+    },
+
+    {
+        "id":8,
+        "imagen":"./img/cafeorganico.png",
+        "nombre":"Café Organico",
+        "tipo":"cafe",
+        "marca":"saula",
+        "precio":1500,
+        "stock":6,
+        "descripcion":"Café Orgánico certificado de autor.",
+        "disponible":true
+    }
+
+
+
+]
