@@ -1,5 +1,4 @@
-const URL = "bbdd/data.https://github.com/Nicoabr25/JS/blob/d794a2be929b96b694549f34f0c723b65e7c1bad/bbdd/data.json";
-// const URL = "/bbdd/data.json";
+const URL = "/bbdd/data.json";
 
 const getData = async () =>{
     prodinicial = []
