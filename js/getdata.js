@@ -1,4 +1,4 @@
-const URL = "/bbdd/data.json";
+const URL = "../bbdd/data.json";
 
 const getData = async () =>{
     prodinicial = []
