@@ -1,7 +1,7 @@
 // --------------------Arrays------------------- ||
 
 let prodinicial = JSON.parse(localStorage.getItem("prodinicial")) || [];
-const prodadded = JSON.parse(localStorage.getItem("prodadded")) || [];
+let prodadded = JSON.parse(localStorage.getItem("prodadded")) || [];
 let productos = [...prodinicial, ...prodadded]
 
 

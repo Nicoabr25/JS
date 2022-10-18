@@ -10,6 +10,12 @@ function enviarcomentario(){
     localStorage.setItem("nombre", contactoNombre.value);
     localStorage.setItem("email", contactoEmail.value);
     localStorage.setItem("comentario", contactoComentario.value);
+    swal({
+        title: "Mensaje Enviado...",
+        text: "En breve nos pondremos en contacto con vos...",
+        icon: "success",
+        button: "Entendido!",
+    });
 }
 
 inputs.forEach(input =>{

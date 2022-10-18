@@ -8,25 +8,46 @@
 //     agregarproducto();
 // })
 
-function agregarproducto(){
+function agregarproducto(){   //id, imagen, nombre, tipo, marca, precio, stock, descripcion, disponible//
     const valores = document.querySelectorAll(".inputaddproduct")
     let disponibilidad = false;
-        valores[4].value > 0 && (disponibilidad=true)
-    let nuevoid = productos.length + 1;
-    let productonuevo = new item(nuevoid, "./img/nodisponible.png", valores[0].value, valores[1].value, valores[2].value, parseInt(valores[3].value), parseInt(valores[4].value), valores[6].value, disponibilidad)
-        console.log(productonuevo)
-        prodadded.push(productonuevo);
-        localStorage.setItem("prodadded", JSON.stringify(prodadded));
+    if(valores[4].value > 0){
+        const cartprod = prodadded.find(product => ((product.nombre == valores[0].value) & (product.marca == valores[2].value)));
+        if (cartprod){
+            swal({
+                title: "Este producto ya se encuentra agregado",
+                text: "Ya has agregado este producto anteriormente",
+                icon: "warning",
+                button: "Ufff!",
+            });
+        }
+        else {
+            valores[4].value > 0 && (disponibilidad=true);    
+            let nuevoid = prodadded.length + 9;
+            let productonuevo = new item(nuevoid, "./img/nodisponible.png", valores[0].value, valores[1].value, valores[2].value, parseInt(valores[3].value), parseInt(valores[4].value), valores[6].value, disponibilidad)
+            console.log(productonuevo)
+            prodadded.push(productonuevo);
+            localStorage.setItem("prodadded", JSON.stringify(prodadded));
 
-        Toastify({
-            text: "Se ha añadido el producto al Inventario",
-            duration: 2000,
-            gravity: "top",
-            position : "left",
-            style: {
-                background: "#3ca6a657",
-            }
-        }).showToast();
+            Toastify({
+                text: "Se ha añadido el producto al Inventario",
+                duration: 2000,
+                gravity: "top",
+                position : "left",
+                style: {
+                    background: "#3ca6a657",
+                }
+            }).showToast();
+        }
+    }
+    else {
+        swal({
+            title: "Stock insuficiente",
+            text: "No puedes agregar productos si no tienes stock!",
+            icon: "warning",
+            button: "🤕",
+        });
+    }
     }
 
 

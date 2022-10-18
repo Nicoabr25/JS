@@ -1,6 +1,6 @@
 //----------Carrito----------//
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
 // ------------------ Crear Cards --------------//
@@ -55,10 +55,11 @@ let buttons = document.querySelectorAll(".button");
                                             cantidad: 1,
                     } 
                     carrito.push(productocarrito)
-                    CrearMensaje(productocarrito);
+                    CrearMensaje(productocarrito)
                 }
             } 
             localStorage.setItem("carrito", JSON.stringify(carrito))
+            setQuantity();
         });
     }
 }
@@ -92,9 +93,6 @@ const Mensaje = document.querySelector("#Mensaje");
 
 function CrearMensaje(prod){
     prod !="" &&  (Mensaje.innerHTML =`<div><h4>✅ El producto ${prod.nombre} se ha agregado al carrito</h4></div>`)
-    // if(prod !=""){
-    //     Mensaje.innerHTML =`<div><h4>✅ El producto ${prod.nombre} se ha agregado al carrito</h4></div>`
-    // }
     setTimeout(BorrarMensaje, 2000);
 }
 
@@ -102,3 +100,12 @@ function BorrarMensaje(){
     Mensaje.innerHTML = " "
 }
 
+//--------- Contador de productos en el carrito -------//
+
+const setQuantity =() =>{
+    const label = document.querySelector("#qty_counter");
+    const cart_qty = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+    (cart_qty == 0) ? label.innerText = " " : label.innerText ="(" + cart_qty + ")";
+}
+
+document.addEventListener("DOMContentLoaded", setQuantity);
