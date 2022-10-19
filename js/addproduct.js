@@ -1,12 +1,7 @@
 
 // //----------------------------Formulario----------------------------//
 
-// ------------------ Add Product --------------// //id, imagen, nombre, tipo, marca, precio, stock, descripcion, disponible//
-// const botonaddproduct = document.querySelector("#addproduct__send")
-// botonaddproduct.addEventListener("click", (e)=>{
-//     e.preventDefault();
-//     agregarproducto();
-// })
+// ------------------ Add Product --------------//
 
 function agregarproducto(){   //id, imagen, nombre, tipo, marca, precio, stock, descripcion, disponible//
     const valores = document.querySelectorAll(".inputaddproduct")
